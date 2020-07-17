@@ -1,4 +1,4 @@
 # jQuery-Array-of-Names
 
-https://jsfiddle.net/petrovitch/hbLwgao4/4/
+<a href="https://jsfiddle.net/petrovitch/hbLwgao4/4/" target="_blank">JSFiddle</a>
 
