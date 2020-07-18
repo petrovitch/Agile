@@ -29,8 +29,15 @@ $(document).ready(function() {
         }
     }
 
-	// Run
-    setInterval(clock, 1000);
+// Run
+setInterval(clock, 1000);
+
+// Solution
+for (var i = 0; i < 5; i++){
+	$("#" + i.toString()).dblclick(function(){
+		$("#" + i.toString()).hide();
+	});
+}
 	
 	$("#0").contextmenu(function(){
 		$("#0").hide();
