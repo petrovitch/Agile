@@ -31,23 +31,16 @@ $(document).ready(function() {
 
 // Run
 setInterval(clock, 1000);
-
-// Solution
-for (var i = 0; i < 5; i++){
-	$("#" + i.toString()).dblclick(function(){
-		$("#" + i.toString()).hide();
-	});
-}
 	
-	$("#0").contextmenu(function(){
+	$("#0").dblclick(function(){
 		$("#0").hide();
 	});
 	
-	$("#1").contextmenu(function(){
+	$("#1").dblclick(function(){
 		$("#1").hide();
 	});
 	
-	$("#2").contextmenu(function(){
+	$("#2").dblclick(function(){
 		$("#2").hide();
 	});
 });
