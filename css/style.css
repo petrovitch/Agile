@@ -1,0 +1,46 @@
+@import 'modal.css';
+
+body {
+    background-color: #eee;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.departments {
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.department {
+    margin: 5px;
+}
+
+.participants {
+    list-style-type: none;
+}
+
+.participant > label {
+    padding: 0 0 0 0.25em;
+}
+
+.participant > label:hover {
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.participant-name {
+    font-weight: normal;
+}
+
+.hidden {
+    display: none;
+}

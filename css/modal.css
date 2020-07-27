@@ -1,0 +1,25 @@
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal__dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    width: 50%;
+}
+
+.modal__header {
+    background-color: gray;
+}
+
+.modal__content {
+    background-color: darkgray;
+}
