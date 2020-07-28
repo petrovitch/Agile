@@ -38,6 +38,16 @@ class Repo {
     getByMeetingId(meetingId) {
         return participants.filter(p => p.meetings.includes(meetingId));
     }
+
+    exportToJson(){
+        var Path = "./Data/participants.json";
+        var Data = JSON.stringify(participants);
+        var Callback = "(err) => { if (err) throw err; }";
+        msWriteProfilerMark(Path, Data, Callback);
+    }
 }
+
+// Temp
+// exportToJson();
 
 export default Repo;
