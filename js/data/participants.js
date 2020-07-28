@@ -39,7 +39,7 @@ class Repo {
         return participants.filter(p => p.meetings.includes(meetingId));
     }
 
-    exportToJson(){
+     exportToJson(){
         var Path = "./Data/participants.json";
         var Data = JSON.stringify(participants);
         var Callback = "(err) => { if (err) throw err; }";
@@ -47,7 +47,6 @@ class Repo {
     }
 }
 
-// Temp
-// exportToJson();
+// Repo.exportToJson();
 
 export default Repo;
