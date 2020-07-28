@@ -1,6 +1,6 @@
-# jQuery-Array-of-Names
+# agile
 
-My first goal is to convert this list of names to an array so js doesn't require code for every name in the list.
+Manage flow control of standup and go/no go meetings.
 
 <a href="https://jsfiddle.net/petrovitch/hbLwgao4/4/" target="_blank">JSFiddle</a>
 
