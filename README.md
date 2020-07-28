@@ -1,4 +1,4 @@
-# agile
+# Agile
 
 Manage flow control of standup and go/no go meetings.
 
