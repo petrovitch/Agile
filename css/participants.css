@@ -1,0 +1,31 @@
+.participants {
+    list-style-type: none;
+}
+
+.participant {
+    margin: 2px;
+}
+
+.participant > label {
+    margin: 5px;
+    
+    /* add a little space between the checkbox and the label */
+    padding: 0 0 0 0.25em;
+}
+
+.participant > label:hover {
+    background-color: var(--highlight-bg);
+    color: var(--highlight-fg);
+}
+
+.participant-name {
+    font-weight: normal;
+}
+
+.departments {
+    box-sizing: border-box;
+}
+
+.department {
+    margin: 5px;
+}
