@@ -7,8 +7,8 @@
 }
 
 body {
-    margin: 0;
-    background-color: azure;
+    /* margin: 0; */
+    background-color: var(--secondary-bg);
 }
 
 img {
