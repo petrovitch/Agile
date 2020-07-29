@@ -3,7 +3,7 @@ import Meeting from './meeting.js';
 import participantMananger from './participantManager.js';
 import loadParticipants from './participantManager.js';
 
-Meeting.render(Type["Scrum"]);
+Meeting.render(Type.Scrum);
 
 init();
 

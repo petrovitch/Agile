@@ -1,0 +1,29 @@
+:root {
+    --primary-bg: #3f3f3f;
+    --primary-fg: white;
+    --secondary-bg: #e5e5e5;
+    --secondary-fg: #3b3b3b;
+    --highlight-bg: var(--primary-fg);
+    --highlight-fg: var(--primary-bg);
+
+    --grid-template-columns: 1fr 1fr;
+
+    --grid-template-areas:
+        "meeting__header       meeting__header"
+        "meeting__content-left meeting__content-right"
+        "meeting__footer       meeting__footer";
+
+}
+
+@media only screen and (max-width: 767px) {
+    
+    :root {
+        --grid-template-columns: 1fr;
+
+        --grid-template-areas:
+            "meeting__header"
+            "meeting__content-left"
+            "meeting__content-right"
+            "meeting__footer";
+    }
+}

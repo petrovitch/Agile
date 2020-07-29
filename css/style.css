@@ -1,46 +1,65 @@
+@import 'variables.css';
 @import 'modal.css';
+@import 'participants.css';
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background-color: #eee;
+    /* margin: 0; */
+    background-color: var(--secondary-bg);
 }
 
 img {
-    height: 300px;
-    width: 300px;
     object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.departments {
-    box-sizing: border-box;
-    background-color: #fff;
-}
-
-.department {
-    margin: 5px;
-}
-
-.participants {
-    list-style-type: none;
-}
-
-.participant > label {
-    padding: 0 0 0 0.25em;
-}
-
-.participant > label:hover {
-    font-weight: bold;
-    font-family: cursive;
-}
-
-.participant-name {
-    font-weight: normal;
+progress {
+    width: 90%;
 }
 
 .hidden {
     display: none;
+}
+
+.meeting {
+    display: grid;
+    grid-template-columns: var(--grid-template-columns);
+    grid-template-areas: var(--grid-template-areas);
+}
+
+.meeting__header {
+    grid-area: meeting__header;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+}
+
+.meeting__content-left {
+    grid-area: meeting__content-left;
+    background-color: var(--secondary-bg);
+    color: var(--secondary-fg);
+}
+
+.meeting__content-right {
+    grid-area: meeting__content-right;
+    background-color: var(--secondary-bg);
+    color: var(--secondary-fg);
+}
+
+.meeting__footer {
+    grid-area: meeting__footer;
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+}
+
+@media only screen and (max-width: 767px) {
+    /* hide the image */   
+    /* img {
+        display: none;
+    }     */
 }

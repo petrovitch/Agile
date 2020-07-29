@@ -14,8 +14,8 @@ class Meeting {
 
         this.id = meeting.id;
         this.title = meeting.title;
-        this.startTime = meeting.startTime;
-        this.endTime = meeting.endTime;
+        this.description = meeting.description;
+        this.duration = meeting.duration;
         this.departments = [];
 
         for (const department of departments) {
@@ -41,7 +41,7 @@ function addTitle(meeting) {
     //     <h1>Meeting</h1>
     // </header>
 
-    const header = document.createElement('header');
+    const header = document.getElementsByClassName('meeting__header')[0];
     if (header) {
         const h1 = document.createElement('h1');
         if (h1) {
@@ -51,11 +51,10 @@ function addTitle(meeting) {
             }
 
             header.appendChild(h1);
-            // parent.appendChild(document.createTextNode(new Date(meeting.starts)));
-            // parent.appendChild(document.createTextNode(' ' + new Date(meeting.ends)));
 
             const progress = document.createElement('progress');
-            const duration = (Date.parse(meeting.endTime) - Date.parse(meeting.startTime)) / 1000
+            const duration = parseDuration(meeting.duration);
+            console.log(duration);
             progress.setAttribute('max', duration);
             progress.setAttribute('value', duration);
             setInterval(() => {
@@ -64,14 +63,12 @@ function addTitle(meeting) {
             }, 1000);
 
             header.appendChild(progress);
-
-            document.body.appendChild(header);
         }
     }
 }
 
 function addDepartments(meeting) {
-    const main = document.createElement('main');
+    const main = document.getElementsByClassName('meeting__content-right')[0];
     if (main) {
 
         const div = document.createElement('div');
@@ -84,8 +81,6 @@ function addDepartments(meeting) {
 
             main.appendChild(div);
         }
-
-        document.body.appendChild(main);
     }
 }
 
@@ -161,6 +156,26 @@ function addParticipant(parent, participant) {
             parent.appendChild(li);
         }
     }
+}
+
+/**
+ * 
+ * @param {string} duration string in the form of "##h##m##s"
+ *  where h = hours, m = minutes, s = seconds can be individual (i.e. "15m")
+ * @returns {number} seconds
+ */
+function parseDuration(duration) {
+    console.log(duration);
+    let seconds = 0;
+    const ar = duration
+        .split(":")
+        .reverse();
+
+    for (let i = 0, ni = Math.min(ar.length, 3); i < ni; ++i) {
+        seconds += ar[i] * Math.pow(60, i);
+    }
+
+    return seconds;
 }
 
 export default Meeting;
