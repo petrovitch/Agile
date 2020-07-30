@@ -25,6 +25,10 @@ progress {
     display: none;
 }
 
+.mark-out {
+    text-decoration: line-through;
+}
+
 .meeting {
     display: grid;
     grid-template-columns: var(--grid-template-columns);

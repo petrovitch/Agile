@@ -150,7 +150,14 @@ function addParticipant(parent, participant) {
 
             // Add event listener for double click to hide
             li.addEventListener('dblclick', (e) => {
-                li.classList.add('hidden');
+                li.classList.toggle('mark-out');
+                if (li.classList.contains('mark-out')) {
+                    checkbox.setAttribute('disabled', null);
+                }
+                else {
+                    checkbox.removeAttribute('disabled');
+                }
+
             });
 
             parent.appendChild(li);
