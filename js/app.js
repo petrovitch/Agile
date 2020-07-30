@@ -19,4 +19,12 @@ function init() {
     }
 
     loadParticipants();
+
+    // When clicked hide splash modal and start meeting timer
+    const splash = document.getElementById('splash');
+    if (splash) {
+        splash.addEventListener('click', e => {
+            splash.classList.add('hidden');
+        });
+    }
 }
