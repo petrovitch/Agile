@@ -68,7 +68,7 @@ function addTitle(meeting) {
 }
 
 function addDepartments(meeting) {
-    const main = document.getElementsByClassName('meeting__content-right')[0];
+    const main = document.getElementsByClassName('meeting__content-left')[0];
     if (main) {
 
         const div = document.createElement('div');
