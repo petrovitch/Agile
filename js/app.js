@@ -4,6 +4,7 @@ import participantMananger from './participantManager.js';
 import loadParticipants from './participantManager.js';
 
 Meeting.render(Type.Scrum);
+//Meeting.render(Type["Go/No-go"]);
 
 init();
 

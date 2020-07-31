@@ -15,6 +15,7 @@ const participants = [
     { id: 13, name: "Eoff, Edward", departmentId: 6, meetings: [2] },
     { id: 14, name: "Rhodes, Matt", departmentId: 5, meetings: [2] },
     { id: 15, name: "Carter, Jerry", departmentId: 5, meetings: [2] },
+    { id: 16, name: "Benson, Christopher", departmentId: 6, meetings: [2] },
 ];
 
 class Repo {

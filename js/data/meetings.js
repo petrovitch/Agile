@@ -16,7 +16,7 @@ const meetings = [
         id: Type["Go/No-go"],
         title: "Go/No-Go",
         description: "",
-        duration: "15:00",
+        duration: "30:00",
         imgUrl: "/img/daily_stand-up.png"
     },
     {
