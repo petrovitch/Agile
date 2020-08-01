@@ -13,13 +13,33 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: lightgray;
-    width: 50%;
+    width: auto;
 }
 
 .modal__header {
-    background-color: gray;
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+}
+
+.modal__header h3 {
+    margin: 0;
+    text-align: center;
 }
 
 .modal__content {
-    background-color: darkgray;
+    padding: 10px 1em 10px 1em;
+    background-color: var(--secondary-bg);
+    width: 100%;
+}
+
+.modal__content label {
+    display: block;
+}
+
+.modal__content input {
+    max-width: 95%;
+}
+
+.modal__field {
+    padding: 0 0 10px 0;
 }

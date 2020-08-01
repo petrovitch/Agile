@@ -9,16 +9,30 @@
 </head>
 
 <body>
+    <nav class="hidden">
+        <input type="checkbox" id="menu_toggle" class="hidden">
+        <label for="menu_toggle" class="hamburger" title="Open Menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <ul class="menu">
+            <li class="menu-item">Meeting Settings</li>
+            <li class="menu-item">Attendee Settings</li>
+        </ul>
+    </nav>
+
     <main class="meeting">
-        <header class="meeting__header"></header>
+        <header class="meeting__header">
+            <h1 id="meeting-title"></h1>
+            <h2 id="meeting-description"></h2>
+        </header>
 
-        <div class="meeting__content-left">
-        </div>
+        <div class="meeting__content-left"></div>
 
-        <div class="meeting__content-right">
-        </div>
+        <div class="meeting__content-right"></div>
 
-        <footer class="meeting__footer">Shelby Systems</footer>
+        <footer class="meeting__footer"></footer>
     </main>
 
     <!-- Modal: Splash/Startup Screen -->
@@ -30,11 +44,38 @@
         </div>
     </div>
 
+    <!-- Modal: Meetings Dialog -->
+    <div id="meeting-settings" class="modal hidden">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3>Meeting</h3>
+            </div>
+            <div class="modal__content">
+                <div class="modal__field">
+                    <label for="meeting-start">Title:</label>
+                    <input type="text" name="" id="meeting-start">
+                </div>
+                <div class="modal__field">
+                    <label for="meeting-description">Description</label>
+                    <input type="text" name="" id="meeting-description">
+                </div>
+                <div class="modal__field">
+                    <label for="meeting-start">Start Time:</label>
+                    <input type="time" name="" id="meeting-start">
+                </div>
+                <div class="modal__field">
+                    <label for="meeting-duration">Duration (in minutes):</label>
+                    <input type="number" name="" id="meeting-duration">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal: Participant Manager -->
-    <div class="modal hidden" id="participantManager">
+    <div id="participantManager" class="modal hidden">
         <div class="modal__dialog">
             <header class="modal__header">
-                <h3>Modal Title</h3>
+                <h3>Participants</h3>
             </header>
             <section class="modal__content">
                 <select id="selectParticipant"></select>

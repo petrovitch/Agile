@@ -9,6 +9,7 @@ const meetings = [
         id: Type.Scrum,
         title: "Daily Stand-Up Meeting",
         description: "Scrum Daily Standup",
+        startTime: "08:45",
         duration: "15:00",
         imageUrl: "/img/splash.png"
     },
@@ -16,6 +17,7 @@ const meetings = [
         id: Type["Go/No-go"],
         title: "Go/No-Go",
         description: "",
+        startTime: "08:45",
         duration: "15:00",
         imageUrl: "/img/daily_stand-up.png"
     },
@@ -23,6 +25,7 @@ const meetings = [
         id: Type.Review,
         title: "Review",
         description: "",
+        startTime: "08:45",
         duration: "1:00:00",
         imageUrl: "/img/daily_stand-up.png"
     }
@@ -38,5 +41,4 @@ class Repo {
     }
 }
 
-export default Repo;
-export { Type };
+export { Repo as default, Type };

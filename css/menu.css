@@ -1,0 +1,45 @@
+nav {
+    display: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hamburger {
+    position: fixed;
+    top: 0.75em;
+    left: 0.75em;
+    display: inline-block;
+    cursor: pointer;
+    /* filter: blur(2px); */
+    transition: filter 250ms ease-out;
+}
+
+.hamburger div {
+    height: 0.3rem;
+    width: 1.5rem;
+    background-color: black;
+    margin: 2px 0;
+    border-radius: 2px;
+}
+
+.hamburger:hover {
+    filter: blur(0);
+    transition: filter 0s;
+}
+
+.menu {
+    display: fixed;
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    width: 250px;
+}
+
+.menu-item {
+    background-color: var(--primary-bg);
+}
+
+.menu-item:hover {
+    text-transform: uppercase;
+    background-color: var(--seconary-bg);
+}

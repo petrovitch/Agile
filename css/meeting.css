@@ -1,0 +1,31 @@
+.meeting {
+    display: grid;
+    grid-template-columns: var(--grid-template-columns);
+    grid-template-areas: var(--grid-template-areas);
+}
+
+.meeting__header {
+    grid-area: meeting__header;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+}
+
+.meeting__content-left {
+    grid-area: meeting__content-left;
+    background-color: var(--secondary-bg);
+    color: var(--secondary-fg);
+}
+
+.meeting__content-right {
+    grid-area: meeting__content-right;
+    background-color: var(--secondary-bg);
+    color: var(--secondary-fg);
+}
+
+.meeting__footer {
+    grid-area: meeting__footer;
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+}
