@@ -8,23 +8,5 @@ Meeting.render(Type.Scrum);
 init();
 
 function init() {
-    const buttonShow = document.getElementById('unhide');
-    if (buttonShow) {
-        buttonShow.addEventListener('click', (e) => {
-            const participants = document.getElementsByClassName('participant');
-            for (const participant of participants) {
-                participant.classList.remove('hidden');
-            }
-        });
-    }
-
     loadParticipants();
-
-    // When clicked hide splash modal and start meeting timer
-    const splash = document.getElementById('splash');
-    if (splash) {
-        splash.addEventListener('click', e => {
-            splash.classList.add('hidden');
-        });
-    }
 }

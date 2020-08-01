@@ -1,6 +1,7 @@
 import { default as MeetingRepo, Type } from './data/meetings.js';
 import DepartmentRepo from './data/departments.js';
 import ParticipantRepo from './data/participants.js';
+import SplashScreen from './controllers/SplashScreen.js';
 
 const meetingRepo = new MeetingRepo();
 const departmentRepo = new DepartmentRepo();
@@ -16,6 +17,7 @@ class Meeting {
         this.title = meeting.title;
         this.description = meeting.description;
         this.duration = meeting.duration;
+        this.imageUrl = meeting.imageUrl;
         this.departments = [];
 
         for (const department of departments) {
@@ -30,6 +32,9 @@ class Meeting {
     // Meeting.render(meetingType)
     static render(meetingType) {
         const meeting = new Meeting(meetingType);
+
+        const splashScreen = new SplashScreen();
+        splashScreen.imageUrl = meeting.imageUrl;
 
         addTitle(meeting);
         addDepartments(meeting);

@@ -10,21 +10,21 @@ const meetings = [
         title: "Daily Stand-Up Meeting",
         description: "Scrum Daily Standup",
         duration: "15:00",
-        imgUrl: "/img/daily_stand-up.png"
+        imageUrl: "/img/splash.png"
     },
     {
         id: Type["Go/No-go"],
         title: "Go/No-Go",
         description: "",
         duration: "15:00",
-        imgUrl: "/img/daily_stand-up.png"
+        imageUrl: "/img/daily_stand-up.png"
     },
     {
         id: Type.Review,
         title: "Review",
         description: "",
         duration: "1:00:00",
-        imgUrl: "/img/daily_stand-up.png"
+        imageUrl: "/img/daily_stand-up.png"
     }
 ];
 
