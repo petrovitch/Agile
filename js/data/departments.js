@@ -8,17 +8,54 @@ const departments = [
 ];
 
 class Repo {
+    get name() {
+        return "Department Repository";
+    }
+
     getAll() {
-        return departments;
+        const promise = new Promise((resolve, reject) => {
+            const data = departments;
+
+            if (data) {
+                resolve(data);
+            }
+            else {
+                reject(Error(`${this.name}: No departments have been defined`));
+            }
+        });
+
+        return promise;
     }
 
     getById(departmentId) {
-        return departments.find(d => d.id = departmentId);
+        const promise = new Promise((resolve, reject) => {
+            const data = departments.find(d => d.id = departmentId);
+
+            if (data) {
+                resolve(data);
+            }
+            else {
+                reject(Error(`${this.name}: No departments found with an id of ${departmentId}`));
+            }
+        });
+
+        return promise;
     }
 
-    getByParticipants(participants) {
-        return departments
-            .filter(d => participants.some(p => p.departmentId == d.id));
+    getByParticipants(attendees) {
+        const promise = new Promise((resolve, reject) => {
+            const data = departments
+                .filter(d => attendees.some(p => p.departmentId == d.id));
+
+            if (data) {
+                resolve(data);
+            }
+            else {
+                reject(Error(`${this.name}: No departments found by paticipants`));
+            }
+        });
+
+        return promise;
     }
 }
 

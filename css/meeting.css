@@ -5,7 +5,9 @@
 }
 
 .meeting__header {
-    grid-area: meeting__header;
+    /* grid-area: meeting__header; */
+    position: sticky;
+    top: 0;
     width: 100%;
     text-align: center;
     background-color: var(--primary-bg);

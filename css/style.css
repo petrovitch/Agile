@@ -2,7 +2,7 @@
 @import 'meeting.css';
 @import 'menu.css';
 @import 'modal.css';
-@import 'participants.css';
+@import 'attendees.css';
 
 * {
     box-sizing: border-box;

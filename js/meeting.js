@@ -1,22 +1,22 @@
 import { default as MeetingRepo, Type } from './data/meetings.js';
 import DepartmentRepo from './data/departments.js';
-import ParticipantRepo from './data/participants.js';
-import SplashScreen from './controllers/SplashScreen.js';
+import ParticipantRepo from './data/attendees.js';
+import SplashScreen from './controllers/splash-modal.js';
+import ProgressIndicator from './controllers/progress-indicator.js';
 
 const meetingRepo = new MeetingRepo();
 const departmentRepo = new DepartmentRepo();
 const participantRepo = new ParticipantRepo();
 
 class Meeting {
-    constructor(meetingType) {
-        const meeting = meetingRepo.getById(meetingType);
-        const participants = participantRepo.getByMeetingId(meetingType);
-        const departments = departmentRepo.getByParticipants(participants);
+    async load(meetingType) {
+        const meeting = await meetingRepo.getById(meetingType);
+        const participants = await participantRepo.getByMeetingId(meetingType);
+        const departments = await departmentRepo.getByParticipants(participants);
 
         this.id = meeting.id;
         this.title = meeting.title;
-        this.description = meeting.description;
-        this.duration = meeting.duration;
+        this.time = meeting.time;
         this.imageUrl = meeting.imageUrl;
         this.departments = [];
 
@@ -29,9 +29,9 @@ class Meeting {
         }
     }
 
-    // Meeting.render(meetingType)
-    static render(meetingType) {
-        const meeting = new Meeting(meetingType);
+    static async render(meetingType) {
+        const meeting = new Meeting();
+        await meeting.load(meetingType);
 
         const splashScreen = new SplashScreen();
         splashScreen.imageUrl = meeting.imageUrl;
@@ -57,17 +57,11 @@ function addTitle(meeting) {
 
             header.appendChild(h1);
 
-            const progress = document.createElement('progress');
-            const duration = parseDuration(meeting.duration);
-            console.log(duration);
-            progress.setAttribute('max', duration);
-            progress.setAttribute('value', duration);
-            setInterval(() => {
-                const remaining = parseInt(progress.getAttribute('value')) - 1;
-                progress.setAttribute('value', remaining);
-            }, 1000);
+            const progressIndicator = new ProgressIndicator();
+            progressIndicator.start = meeting.time.start;
+            progressIndicator.duration = meeting.time.duration;
 
-            header.appendChild(progress);
+            header.appendChild(progressIndicator.element);
         }
     }
 }
@@ -96,14 +90,14 @@ function addDepartment(parent, department) {
         if (section) {
             section.classList.add('department');
 
-            const h2 = document.createElement('h2');
-            if (h2) {
-                const text = document.createTextNode(department.name);
-                if (text) {
-                    h2.appendChild(text);
-                    section.appendChild(h2);
-                }
-            }
+            // const h2 = document.createElement('h2');
+            // if (h2) {
+            //     const text = document.createTextNode(department.name);
+            //     if (text) {
+            //         h2.appendChild(text);
+            //         section.appendChild(h2);
+            //     }
+            // }
 
             addParticipants(section, department.participants);
 
@@ -119,7 +113,27 @@ function addParticipants(parent, participants) {
         if (ul) {
             ul.classList.add('participants');
 
-            for (const participant of participants) {
+            const sorted = participants.sort((a, b) => {
+                if (a.name.last < b.name.last) {
+                    return -1;
+                }
+
+                if (a.name.last > b.name.last) {
+                    return 1;
+                }
+
+                if (a.name.first < b.name.first) {
+                    return -1;
+                }
+
+                if (a.name.first > b.name.first) {
+                    return 1;
+                }
+
+                return 0;
+            });
+
+            for (const participant of sorted) {
                 addParticipant(ul, participant);
             }
 
@@ -147,7 +161,7 @@ function addParticipant(parent, participant) {
             if (label) {
                 label.setAttribute('for', participant.id);
                 label.classList.add('participant-name');
-                const text = document.createTextNode(participant.name);
+                const text = document.createTextNode(`${participant.name.last}, ${participant.name.first}`);
                 label.appendChild(text);
 
                 li.appendChild(label);
@@ -168,26 +182,6 @@ function addParticipant(parent, participant) {
             parent.appendChild(li);
         }
     }
-}
-
-/**
- * 
- * @param {string} duration string in the form of "##h##m##s"
- *  where h = hours, m = minutes, s = seconds can be individual (i.e. "15m")
- * @returns {number} seconds
- */
-function parseDuration(duration) {
-    console.log(duration);
-    let seconds = 0;
-    const ar = duration
-        .split(":")
-        .reverse();
-
-    for (let i = 0, ni = Math.min(ar.length, 3); i < ni; ++i) {
-        seconds += ar[i] * Math.pow(60, i);
-    }
-
-    return seconds;
 }
 
 export default Meeting;
