@@ -67,8 +67,8 @@ function addTitle(meeting) {
 }
 
 function addDepartments(meeting) {
-    const main = document.getElementsByClassName('meeting__content-left')[0];
-    if (main) {
+    const attendeeList = document.getElementById('attendee-list');
+    if (attendeeList) {
 
         const div = document.createElement('div');
         if (div) {
@@ -78,7 +78,7 @@ function addDepartments(meeting) {
                 addDepartment(div, department);
             }
 
-            main.appendChild(div);
+            attendeeList.appendChild(div);
         }
     }
 }
@@ -169,9 +169,15 @@ function addParticipant(parent, participant) {
 
             // Add event listener for double click to hide
             li.addEventListener('dblclick', (e) => {
-                li.classList.toggle('mark-out');
-                if (li.classList.contains('mark-out')) {
-                    checkbox.setAttribute('disabled', null);
+                label.classList.toggle('marked-out');
+
+                window.getSelection().removeAllRanges();
+
+                if (label.classList.contains('marked-out')) {
+                    checkbox.checked = false;
+
+                    const disabled = document.createAttribute('disabled');
+                    checkbox.setAttributeNode(disabled);
                 }
                 else {
                     checkbox.removeAttribute('disabled');

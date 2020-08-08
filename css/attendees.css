@@ -1,5 +1,11 @@
+
 .participants {
     list-style-type: none;
+}
+
+.participant input[type="checkbox"]:checked + label {
+    font-weight: lighter;
+    color: var(--disabled-fg);
 }
 
 .participant {
@@ -16,10 +22,12 @@
 .participant > label:hover {
     background-color: var(--highlight-bg);
     color: var(--highlight-fg);
+    font-weight: bold;
 }
 
 .participant-name {
     font-weight: normal;
+    color: black;
 }
 
 .departments {
@@ -28,4 +36,10 @@
 
 .department {
     margin: 5px;
+}
+
+.marked-out {
+    text-decoration: line-through;
+    color: var(--disabled-fg);
+    font-weight: lighter;
 }

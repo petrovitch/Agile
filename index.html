@@ -25,11 +25,16 @@
     <header class="meeting__header">
         <h1 id="meeting-title"></h1>
         <h2 id="meeting-description"></h2>
+        <progress id="meeting-progress"></progress>
     </header>
     <main class="meeting">
-        <div class="meeting__content-left"></div>
+        <div class="meeting__content-left">
+            <div id="attendee-list"></div>
+        </div>
 
-        <div class="meeting__content-right"></div>
+        <div class="meeting__content-right">
+            <textarea id="meeting-notes"></textarea>
+        </div>
 
         <footer class="meeting__footer"></footer>
     </main>
@@ -71,7 +76,7 @@
     </div>
 
     <!-- Modal: Participant Manager -->
-    <div id="participantManager" class="modal hidden">
+    <div id="participantManager" class="[ modal ] [ hidden ]">
         <div class="modal__dialog">
             <header class="modal__header">
                 <h3>Participants</h3>

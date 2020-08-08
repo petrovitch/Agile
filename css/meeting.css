@@ -31,3 +31,8 @@
     background-color: var(--primary-bg);
     color: var(--primary-fg);
 }
+
+#meeting-notes {
+    height: 100%;
+    width: 100%;
+}

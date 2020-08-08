@@ -23,7 +23,3 @@ progress {
 .hidden {
     display: none;
 }
-
-.mark-out {
-    text-decoration: line-through;
-}

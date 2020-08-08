@@ -5,6 +5,8 @@
     --secondary-fg: #3b3b3b;
     --highlight-bg: var(--primary-fg);
     --highlight-fg: var(--primary-bg);
+    
+    --disabled-fg: #aaa;
 
     --grid-template-columns: 1fr 1fr;
 

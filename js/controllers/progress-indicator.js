@@ -1,9 +1,6 @@
 class ProgressIndicator {
     constructor(tick = 1000) {
-        this._progress = document.getElementById('progress');
-        if (!this._progress) {
-            this._progress = document.createElement('progress');
-        }
+        this._progress = document.getElementById('meeting-progress');
 
         this._tick = tick;
         this._start = new Date();
@@ -40,7 +37,7 @@ class ProgressIndicator {
         }
         else {
             clearInterval(this._id);
-            alert(`time is up`)
+            alert(`This meeting has ended`);
         }
     }
 }
