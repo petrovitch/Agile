@@ -17,7 +17,8 @@ img {
 }
 
 progress {
-    width: 90%;
+    margin: 0 0 5px 0;
+    width: 98%;
 }
 
 .hidden {
