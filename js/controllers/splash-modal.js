@@ -10,7 +10,12 @@ class Controller {
 
     set imageUrl(imageUrl) {
         if (IMAGE) {
-            IMAGE.setAttribute('src', imageUrl);
+            if (imageUrl) {
+                IMAGE.setAttribute('src', imageUrl);
+            }
+            else {
+                MODAL.classList.add('hidden');
+            }
         }
     }
 }
@@ -20,5 +25,7 @@ export default Controller;
 function onClickEvent(e) {
     const modal = e.currentTarget;
 
-    modal.classList.toggle('hidden');
+    if (!modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+    }
 }

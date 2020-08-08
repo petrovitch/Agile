@@ -9,22 +9,22 @@ const meetings = [
         id: Type.Scrum,
         title: "Daily Stand-Up Meeting",
         description: "Scrum Daily Standup",
-        time: { start: "17:20", duration: "5" },
+        time: { start: "22:25", duration: "5" },
         imageUrl: "/img/splash.png"
     },
     {
         id: Type.GoNoGo,
         title: "Go/No-Go",
         description: "",
-        time: { start: "08:45", duration: "15" },
-        imageUrl: "/img/daily_stand-up.png"
+        time: { start: "22:30", duration: "30" },
+        imageUrl: ""
     },
     {
         id: Type.Review,
         title: "Review",
         description: "",
         time: { start: "08:45", duration: "15" },
-        imageUrl: "/img/daily_stand-up.png"
+        imageUrl: ""
     }
 ];
 
