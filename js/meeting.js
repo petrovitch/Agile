@@ -3,6 +3,7 @@ import DepartmentRepo from './data/departments.js';
 import ParticipantRepo from './data/attendees.js';
 import SplashScreen from './controllers/splash-modal.js';
 import ProgressIndicator from './controllers/progress-indicator.js';
+import { sort } from './util/util.js';
 
 const meetingRepo = new MeetingRepo();
 const departmentRepo = new DepartmentRepo();
@@ -113,27 +114,10 @@ function addParticipants(parent, participants) {
         if (ul) {
             ul.classList.add('participants');
 
-            const sorted = participants.sort((a, b) => {
-                if (a.name.last < b.name.last) {
-                    return -1;
-                }
+            const sortedAttendees = participants
+                .sort(sort.random);
 
-                if (a.name.last > b.name.last) {
-                    return 1;
-                }
-
-                if (a.name.first < b.name.first) {
-                    return -1;
-                }
-
-                if (a.name.first > b.name.first) {
-                    return 1;
-                }
-
-                return 0;
-            });
-
-            for (const participant of sorted) {
+            for (const participant of sortedAttendees) {
                 addParticipant(ul, participant);
             }
 
