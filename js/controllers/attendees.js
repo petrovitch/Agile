@@ -2,6 +2,4 @@ class Attendees {
 
 }
 
-export default Attendees {
-
-}
+export default Attendees;
