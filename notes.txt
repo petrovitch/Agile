@@ -1,0 +1,4 @@
+Add clock
+
+Do not separate people by department
+* add meeting role to separate meeting leader(s) from the general populace.
