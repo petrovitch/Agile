@@ -78,6 +78,7 @@ function addTitle(meeting) {
         const progressIndicator = new ProgressIndicator();
         progressIndicator.start = meeting.time.start;
         progressIndicator.duration = meeting.time.duration;
+        progressIndicator.update();
     }
 }
 
