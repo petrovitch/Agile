@@ -42,28 +42,41 @@ class Meeting {
     }
 }
 
+const months = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
+
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+function formatClock(dateTime) {
+    const day = days[dateTime.getDay()],
+        month = months[dateTime.getMonth()],
+        date = dateTime.getDate(),
+        year = dateTime.getFullYear(),
+        h = dateTime.getHours(),
+        m = dateTime.getMinutes(),
+        s = dateTime.getSeconds();
+
+    return `${day}, ${month} ${date} ${year}, ${h}:${m}:${s}`
+}
+
 function addTitle(meeting) {
-    // <header id="main-header">
-    //     <h1>Meeting</h1>
-    // </header>
+    const title = document.getElementById('meeting-title');
+    if (title) {
+        title.innerHTML = meeting.title;
 
-    const header = document.getElementsByClassName('meeting__header')[0];
-    if (header) {
-        const h1 = document.createElement('h1');
-        if (h1) {
-            const title = document.createTextNode(meeting.title);
-            if (title) {
-                h1.appendChild(title);
-            }
+        const subTitle = document.getElementById('meeting-clock');
+        if (subTitle) {
 
-            header.appendChild(h1);
-
-            const progressIndicator = new ProgressIndicator();
-            progressIndicator.start = meeting.time.start;
-            progressIndicator.duration = meeting.time.duration;
-
-            header.appendChild(progressIndicator.element);
+            setInterval(() => {
+                subTitle.innerText = formatClock(new Date());
+            }, 1000);
         }
+
+        const progressIndicator = new ProgressIndicator();
+        progressIndicator.start = meeting.time.start;
+        progressIndicator.duration = meeting.time.duration;
     }
 }
 
