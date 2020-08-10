@@ -55,10 +55,10 @@ function formatClock(dateTime) {
         date = dateTime.getDate(),
         year = dateTime.getFullYear(),
         h = dateTime.getHours(),
-        m = dateTime.getMinutes(),
-        s = dateTime.getSeconds();
+        m = dateTime.getMinutes().toString().padStart(2, '0'),
+        s = dateTime.getSeconds().toString().padStart(2, '0');
 
-    return `${day}, ${month} ${date} ${year}, ${h}:${m}:${s}`
+    return `${day}, ${month} ${date}, ${year}, ${h}:${m}:${s}`
 }
 
 function addTitle(meeting) {
@@ -69,6 +69,7 @@ function addTitle(meeting) {
         const subTitle = document.getElementById('meeting-clock');
         if (subTitle) {
 
+            subTitle.innerText = formatClock(new Date());
             setInterval(() => {
                 subTitle.innerText = formatClock(new Date());
             }, 1000);
