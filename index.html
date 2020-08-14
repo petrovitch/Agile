@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meeting</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="about:blank">
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav class="hidden">
         <input type="checkbox" id="menu_toggle" class="hidden">
         <label for="menu_toggle" class="hamburger" title="Open Menu">
@@ -27,6 +29,7 @@
         <h2 id="meeting-description"></h2>
         <progress id="meeting-progress"></progress>
     </header>
+
     <main class="meeting">
         <div class="meeting__content-left">
             <div id="attendee-list"></div>
@@ -40,7 +43,7 @@
     </main>
 
     <!-- Modal: Splash/Startup Screen -->
-    <div class="modal" id="splash">
+    <div id="splash" class="modal hidden">
         <div class="modal__dialog">
             <div class="modal__content">
                 <img id="splash-image" alt="Dude! Where's my image?">
