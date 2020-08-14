@@ -1,3 +1,5 @@
+import { RoleType as Role } from './types.js';
+
 const Type = {
     None: 0,
     Scrum: 1,
@@ -10,23 +12,47 @@ const meetings = [
     {
         id: Type.Scrum,
         title: "Daily Stand-Up Meeting",
-        description: "Scrum Daily Standup",
-        time: { start: "8:45", duration: "15" },
-        imageUrl: "/img/splash.png"
+        time: { start: "18:45", duration: "15" },
+        imageUrl: "/img/splash.png",
+        attendees: [
+            { id: 1, role: Role.Lead },
+            { id: 2, role: Role.Lead },
+            { id: 3, role: Role.Participant },
+            { id: 4, role: Role.Participant },
+            { id: 5, role: Role.Participant },
+            { id: 6, role: Role.Participant },
+            { id: 7, role: Role.Participant },
+            { id: 8, role: Role.Participant },
+            { id: 9, role: Role.Participant },
+            { id: 10, role: Role.Participant },
+            { id: 11, role: Role.Participant },
+            { id: 12, role: Role.Participant },
+            { id: 13, role: Role.Observer }
+        ]
     },
     {
         id: Type.GoNoGo,
         title: "Go/No-Go",
-        description: "",
         time: { start: "14:00", duration: "30" },
-        imageUrl: ""
-    },
-    {
-        id: Type.SprintReview,
-        title: "Review",
-        description: "",
-        time: { start: "09:00", duration: "60" },
-        imageUrl: ""
+        imageUrl: "",
+        attendees: [
+            { id: 1, role: Role.Lead },
+            { id: 2, role: Role.Lead },
+            { id: 3, role: Role.Participant },
+            { id: 4, role: Role.Participant },
+            { id: 5, role: Role.Participant },
+            { id: 6, role: Role.Participant },
+            { id: 7, role: Role.Participant },
+            { id: 8, role: Role.Participant },
+            { id: 9, role: Role.Participant },
+            { id: 10, role: Role.Participant },
+            { id: 11, role: Role.Participant },
+            { id: 12, role: Role.Participant },
+            { id: 13, role: Role.Participant },
+            { id: 14, role: Role.Participant },
+            { id: 15, role: Role.Participant },
+            { id: 15, role: Role.Participant }
+        ]
     }
 ];
 

@@ -37,7 +37,7 @@ class ProgressIndicator {
         }
         else {
             clearInterval(this._id);
-            alert(`This meeting has ended`);
+            // alert(`This meeting has ended`);
         }
     }
 }

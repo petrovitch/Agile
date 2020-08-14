@@ -14,7 +14,7 @@ class Observable {
         }
     }
 
-    publish(data) {
+    notify(data) {
         this._subscribers.forEach(s => s.onNotify(data));
     }
 }
