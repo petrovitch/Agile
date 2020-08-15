@@ -1,7 +1,6 @@
 import MeetingRepo from './data/meetings.js';
 import SplashScreen from './controllers/splash-modal.js';
 import ProgressIndicator from './controllers/progress-indicator.js';
-import AttendeesModel from './models/attendees.js';
 import AttendeeController from './controllers/attendees.js';
 import MeetingModel from './models/meeting.js';
 
@@ -48,7 +47,7 @@ function formatClock(dateTime) {
         m = dateTime.getMinutes().toString().padStart(2, '0'),
         s = dateTime.getSeconds().toString().padStart(2, '0');
 
-    return `${day}, ${month} ${date}, ${year}, ${h}:${m}:${s}`
+    return `${day}, ${month}${month !== 'May' ? '.' : ''} ${date}, ${year}, ${h}:${m}:${s}`
 }
 
 function addTitle(meeting) {
