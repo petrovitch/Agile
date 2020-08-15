@@ -1,4 +1,8 @@
 import { Type } from './js/data/meetings.js';
-import Meeting from './js/meeting.js';
+import Model from './js/models/meeting.js';
+import Controller from './js/controllers/meeting.js';
 
-Meeting.render(Type.Scrum);
+const model = new Model();
+const controller = new Controller(model);
+
+controller.init(Type.GoNoGo);

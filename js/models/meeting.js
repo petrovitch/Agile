@@ -7,12 +7,16 @@ const attendeeRepo = new AttendeeRepo();
 class Model {
     get id() { return this._id; }
     set id(value) {
-        this._id = value;
+        if (this._id !== value) {
+            this._id = value;
+        }
     }
 
     get title() { return this._title; }
     set title(value) {
-        this._title = value;
+        if (this._title !== value) {
+            this._title = value;
+        }
     }
 
     get time() { return this._time; }
@@ -25,12 +29,20 @@ class Model {
         this._attendees = value;
     }
 
+    get imageUrl() { return this._imageUrl; }
+    set imageUrl(value) {
+        if (this._imageUrl !== value) {
+            this._imageUrl = value;
+        }
+    }
+
     async load(meetingId) {
         try {
             const meeting = await meetingRepo.getById(meetingId);
             this.id = meeting.id;
             this.title = meeting.title;
             this.time = meeting.time;
+            this.imageUrl = meeting.imageUrl;
             if (meeting) {
                 const attendees = [];
                 for (const attendee of meeting.attendees) {

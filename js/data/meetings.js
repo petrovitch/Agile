@@ -12,7 +12,7 @@ const meetings = [
     {
         id: Type.Scrum,
         title: "Daily Stand-Up Meeting",
-        time: { start: "18:45", duration: "15" },
+        time: { start: "08:00", duration: "15" },
         imageUrl: "/img/splash.png",
         attendees: [
             { id: 1, role: Role.Lead },
@@ -51,7 +51,7 @@ const meetings = [
             { id: 13, role: Role.Participant },
             { id: 14, role: Role.Participant },
             { id: 15, role: Role.Participant },
-            { id: 15, role: Role.Participant }
+            { id: 16, role: Role.Participant }
         ]
     }
 ];

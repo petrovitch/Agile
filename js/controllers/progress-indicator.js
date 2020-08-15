@@ -1,18 +1,22 @@
-class ProgressIndicator {
-    constructor(tick = 1000) {
-        this._progress = document.getElementById('meeting-progress');
+const view = {
+    progressBar: document.getElementById('meeting-progress')
+};
 
-        this._tick = tick;
+class ProgressIndicator {
+    constructor(model = {}) {
+        this.model = model;
+        this._tick = 1000;
         this._start = new Date();
         this._duration = 900;
 
+        this.update();
         this._id = setInterval(() => {
             this.update();
-        }, tick);
+        }, this._tick);
     }
 
     get element() {
-        return this._progress;
+        return view.progressBar;
     }
 
     set start(value) {
@@ -37,7 +41,7 @@ class ProgressIndicator {
         }
         else {
             clearInterval(this._id);
-            // alert(`This meeting has ended`);
+            alert(`This meeting has ended`);
         }
     }
 }

@@ -9,35 +9,14 @@ class Controller {
     constructor(model = {}) {
         this.model = model;
 
+        this.init();
+    }
+
+    async init() {
         if (view.control) {
             view.control.appendChild(this.addGroups());
         }
     }
-
-    /*
-    <div class="groups">
-        <div class="group">
-            <ul class="attendees">
-                <li class="attendee">
-                    <input type="checkbox" id="attendeeId">
-                    <label for="id" class="attendee-name">Attendee Name</label>
-                </li>
-                <li class="attendee">
-                    <input type="checkbox" id="attendeeId">
-                    <label for="id" class="attendee-name">Attendee Name</label>
-                </li>
-            </ul>
-        </div>
-        <div class="group">
-            <ul class="attendees">
-                <li class="attendee">
-                    <input type="checkbox" id="attendeeId">
-                    <label for="id" class="attendee-name">Attendee Name</label>
-                </li>
-            </ul>
-        </div>
-    </div>
-    */
 
     addGroups() {
         const groups = [...new Set(this.model.attendees.map(a => a.role))].sort();
