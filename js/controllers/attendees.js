@@ -12,7 +12,7 @@ class Controller {
         this.init();
     }
 
-    async init() {
+    init() {
         if (view.control) {
             view.control.appendChild(this.addGroups());
         }

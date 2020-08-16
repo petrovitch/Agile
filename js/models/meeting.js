@@ -24,16 +24,16 @@ class Model {
         this._time = value;
     }
 
-    get attendees() { return this._attendees; }
-    set attendees(value) {
-        this._attendees = value;
-    }
-
     get imageUrl() { return this._imageUrl; }
     set imageUrl(value) {
         if (this._imageUrl !== value) {
             this._imageUrl = value;
         }
+    }
+
+    get attendees() { return this._attendees; }
+    set attendees(value) {
+        this._attendees = value;
     }
 
     async load(meetingId) {
