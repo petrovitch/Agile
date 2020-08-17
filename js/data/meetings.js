@@ -1,16 +1,8 @@
 import { RoleType as Role } from './types.js';
 
-const Type = {
-    None: 0,
-    Scrum: 1,
-    GoNoGo: 2,
-    SprintReview: 3,
-    SprintPlanning: 4
-};
-
 const meetings = [
     {
-        id: Type.Scrum,
+        id: 1,
         title: "Daily Stand-Up Meeting",
         time: { start: "08:00", duration: "15" },
         imageUrl: "/img/splash.png",
@@ -31,7 +23,7 @@ const meetings = [
         ]
     },
     {
-        id: Type.GoNoGo,
+        id: 2,
         title: "Go/No-Go",
         time: { start: "14:00", duration: "30" },
         imageUrl: "",
@@ -56,6 +48,7 @@ const meetings = [
     }
 ];
 
+const repoName = 'Meeting Repository';
 class Repo {
     getAll() {
         const promise = new Promise((resolve, reject) => {
@@ -65,7 +58,7 @@ class Repo {
                 resolve(data);
             }
             else {
-                reject(Error('Meeting Repository: No meetings exist in DB'));
+                reject(Error(`${repoName}: No meetings exist in DB`));
             }
 
         });
@@ -81,7 +74,7 @@ class Repo {
                 resolve(data);
             }
             else {
-                reject(Error(`Meeting Repository: Could not find meeting with an id of ${id}`));
+                reject(Error(`${repoName}: Could not find meeting with an id of ${id}`));
             }
         });
 
@@ -89,4 +82,4 @@ class Repo {
     }
 }
 
-export { Repo as default, Type };
+export { Repo as default };

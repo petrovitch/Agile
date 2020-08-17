@@ -1,7 +1,6 @@
 import AttendeeController from './attendees.js';
 import ProgressIndicator from './progress-indicator.js';
 import SplashScreen from './splash-modal.js';
-import { Type } from '../data/meetings.js';
 
 const view = {
     header: {
@@ -13,14 +12,16 @@ const view = {
 class Controller {
     constructor(model = {}) {
         this.model = model;
+
+        this.init();
     }
 
-    async init(meetingId = Type.Scrum) {
-        await this.model.load(meetingId);
+    async init() {
+        const meeting = await this.model.load();
 
         // Add Title:
         if (view.header.title) {
-            const text = document.createTextNode(this.model.title);
+            const text = document.createTextNode(meeting.title);
             view.header.title.appendChild(text);
         }
 
@@ -33,16 +34,16 @@ class Controller {
             }, 1000);
         }
 
-        const progressIndicator = new ProgressIndicator(this.model);
-        progressIndicator.start = this.model.time.start;
-        progressIndicator.duration = this.model.time.duration;
+        // Progress Bar
+        const progressIndicator = new ProgressIndicator(meeting);
+        progressIndicator.start = meeting.time.start;
+        progressIndicator.duration = meeting.time.duration;
 
         // Show Splash:
-        const splashScreen = new SplashScreen(this.model);
-
+        const splashScreen = new SplashScreen(meeting);
 
         // Show Attendees:
-        const attendeeController = new AttendeeController(this.model);
+        const attendeeController = new AttendeeController(meeting);
     }
 }
 
