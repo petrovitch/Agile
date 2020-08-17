@@ -17,8 +17,13 @@ img {
 }
 
 progress {
-    margin: 0 0 5px 0;
+    height: 1.25em;
     width: 98%;
+    margin: 0 0 5px 0;
+}
+
+progress:not([value])  {
+    display: none;
 }
 
 .hidden {

@@ -9,6 +9,9 @@ class ProgressIndicator {
         this._start = new Date();
         this._duration = 900;
 
+        // this.start = model.time.start;
+        // this.duration = model.time.duration;
+
         this.update();
         this._id = setInterval(() => {
             this.update();

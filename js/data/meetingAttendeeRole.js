@@ -1,3 +1,5 @@
+import { RoleType as Role } from './types.js';
+
 const data = [
     { meetingId: 1, attendeeId: 1, role: Role.Lead },
     { meetingId: 1, attendeeId: 2, role: Role.Lead },
@@ -48,3 +50,4 @@ class Repo {
     }
 }
 
+export default Repo;

@@ -19,7 +19,7 @@ class Controller {
     }
 
     addGroups() {
-        const groups = [...new Set(this.model.attendees.map(a => a.role))].sort();
+        const groups = [...new Set(this.model.map(a => a.role))].sort();
 
         const div = document.createElement('div');
         if (div) {
@@ -49,7 +49,7 @@ class Controller {
         if (ul) {
             ul.classList.add('participants');
 
-            let groupAttendees = this.model.attendees
+            let groupAttendees = this.model
                 .filter(a => a.role === group);
 
             // Randomize attendees

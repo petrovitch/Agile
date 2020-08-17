@@ -2,6 +2,10 @@ import AttendeeController from './attendees.js';
 import ProgressIndicator from './progress-indicator.js';
 import SplashScreen from './splash-modal.js';
 
+import MeetingRoleRepo from '../data/meetingAttendeeRole.js';
+import AttendeeDetailRepo from '../data/attendeeDetail.js';
+import MeetingAttendeeModel from '../models/attendees.js';
+
 const view = {
     header: {
         title: document.getElementById('meeting-title'),
@@ -17,7 +21,7 @@ class Controller {
     }
 
     async init() {
-        const meeting = await this.model.load();
+        const meeting = await this.model.load(2);
 
         // Add Title:
         if (view.header.title) {
@@ -36,14 +40,22 @@ class Controller {
 
         // Progress Bar
         const progressIndicator = new ProgressIndicator(meeting);
-        progressIndicator.start = meeting.time.start;
-        progressIndicator.duration = meeting.time.duration;
+        // progressIndicator.start = meeting.time.start;
+        // progressIndicator.duration = meeting.time.duration;
 
         // Show Splash:
         const splashScreen = new SplashScreen(meeting);
 
         // Show Attendees:
-        const attendeeController = new AttendeeController(meeting);
+        this.initAttendeeList(meeting);
+    }
+
+    async initAttendeeList(meeting) {
+        const meetingRoleRepo = new MeetingRoleRepo();
+        const attendeeDetailRepo = new AttendeeDetailRepo();
+        const attendeeModel = new MeetingAttendeeModel(meetingRoleRepo, attendeeDetailRepo);
+        const model = await attendeeModel.load(meeting.id);
+        const attendeeController = new AttendeeController(model);
     }
 }
 
