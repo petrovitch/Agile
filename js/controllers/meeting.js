@@ -2,8 +2,8 @@ import AttendeeController from './attendees.js';
 import ProgressIndicator from './progress-indicator.js';
 import SplashScreen from './splash-modal.js';
 
-import MeetingRoleRepo from '../data/meetingAttendeeRole.js';
-import AttendeeDetailRepo from '../data/attendeeDetail.js';
+import MeetingRoleRepo from '../data/attendee-roles.js';
+import AttendeeDetailRepo from '../data/attendee-details.js';
 import MeetingAttendeeModel from '../models/attendees.js';
 
 const view = {
