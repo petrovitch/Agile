@@ -21,7 +21,7 @@ class Controller {
     }
 
     async init() {
-        const meeting = await this.model.load(2);
+        const meeting = await this.model.load();
 
         // Add Title:
         if (view.header.title) {
@@ -40,8 +40,6 @@ class Controller {
 
         // Progress Bar
         const progressIndicator = new ProgressIndicator(meeting);
-        // progressIndicator.start = meeting.time.start;
-        // progressIndicator.duration = meeting.time.duration;
 
         // Show Splash:
         const splashScreen = new SplashScreen(meeting);

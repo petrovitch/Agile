@@ -4,7 +4,7 @@ const meetings = [
     {
         id: 1,
         title: "Daily Stand-Up Meeting",
-        time: { start: "13:30", duration: "2" },
+        time: { start: "8:45", duration: "15" },
         imageUrl: "/img/splash.png"
     },
     {

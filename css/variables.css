@@ -1,4 +1,6 @@
 :root {
+    --horizontal-monitor: 767px;
+
     --primary-bg: #3f3f3f;
     --primary-fg: white;
     --secondary-bg: #e5e5e5;
@@ -17,7 +19,7 @@
 
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: var(--horizontal-monitor)) {
     
     :root {
         --grid-template-columns: 1fr;

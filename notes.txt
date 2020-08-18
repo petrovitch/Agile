@@ -1,2 +1,5 @@
-Do not separate people by department
-* add meeting role to separate meeting leader(s) from the general populace.
+Changes:
+Remove "Grid" for main body of page - wasn't really using it anyway.
+* (Need to clean up meeting.css if we're not going to use grid)
+Reset default meeting and meeting time that I had accidently left changes I'd made in dev in.
+Larger than a certain screen size now creates two columns of each type/role of attendees.

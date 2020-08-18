@@ -1,5 +1,5 @@
 .meeting {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: var(--grid-template-columns);
     grid-template-areas: var(--grid-template-areas);
 }
@@ -8,10 +8,20 @@
     /* grid-area: meeting__header; */
     position: sticky;
     top: 0;
+    min-height: 70px;
     width: 100%;
     text-align: center;
     background-color: var(--primary-bg);
     color: var(--primary-fg);
+}
+
+.meeting__header h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.meeting__header h1 {
+    font-size: 2em;
 }
 
 .meeting__content-left {
