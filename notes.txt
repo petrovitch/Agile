@@ -3,3 +3,6 @@ Remove "Grid" for main body of page - wasn't really using it anyway.
 * (Need to clean up meeting.css if we're not going to use grid)
 Reset default meeting and meeting time that I had accidently left changes I'd made in dev in.
 Larger than a certain screen size now creates two columns of each type/role of attendees.
+* 2020-08-21 09:19 AM Noticing peoples reaction it might be nice to highlight the person 
+speaking, and maybe gray Edward's name so we know he is there, but he's in the background 
+so people won't consider calling on him.
