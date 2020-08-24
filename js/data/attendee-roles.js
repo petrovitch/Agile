@@ -14,6 +14,8 @@ const data = [
     { meetingId: 1, attendeeId: 11, role: Role.Participant },
     { meetingId: 1, attendeeId: 12, role: Role.Participant },
     { meetingId: 1, attendeeId: 13, role: Role.Observer },
+    { meetingId: 1, attendeeId: 17, role: Role.Participant },
+
 
     { meetingId: 2, attendeeId: 1, role: Role.Lead },
     { meetingId: 2, attendeeId: 2, role: Role.Lead },
@@ -30,7 +32,8 @@ const data = [
     { meetingId: 2, attendeeId: 13, role: Role.Participant },
     { meetingId: 2, attendeeId: 14, role: Role.Participant },
     { meetingId: 2, attendeeId: 15, role: Role.Participant },
-    { meetingId: 2, attendeeId: 16, role: Role.Participant }
+    { meetingId: 2, attendeeId: 16, role: Role.Participant },
+    { meetingId: 2, attendeeId: 17, role: Role.Participant }
 ];
 
 const repoName = 'Meeting Attendee Role Repository'
