@@ -80,6 +80,7 @@ class Controller {
                 // Hide checkbox for observers
                 if (attendee.role === Type.Observer) {
                     checkbox.classList.add('hidden');
+                    checkbox.checked = true;
                 }
 
                 li.appendChild(checkbox);
