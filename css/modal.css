@@ -8,12 +8,15 @@
 }
 
 .modal__dialog {
+    /* Centered: 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    */    
+    margin: 15% auto;
     background-color: lightgray;
-    width: auto;
+    width: 15em;
 }
 
 .modal__header {
@@ -21,7 +24,7 @@
     color: var(--primary-fg);
 }
 
-.modal__header h3 {
+.modal__header h2 {
     margin: 0;
     text-align: center;
 }
@@ -37,9 +40,21 @@
 }
 
 .modal__content input {
-    max-width: 95%;
+    max-width: 98%;
 }
 
 .modal__field {
-    padding: 0 0 10px 0;
+    padding: 0 0 8px 0;
+}
+
+.modal__footer {
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+}
+
+.modal__button {
+    font-size: 14px;
+    width: 7em;
+    padding: 5px;
+    margin: 2px;
 }

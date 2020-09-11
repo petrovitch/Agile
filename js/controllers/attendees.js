@@ -72,6 +72,8 @@ class Controller {
 
             const id = attendee.id;
 
+            const div = document.createElement('div');
+
             const checkbox = document.createElement('input');
             if (checkbox) {
                 checkbox.setAttribute('type', 'checkbox');
@@ -112,7 +114,9 @@ class Controller {
                 }
             });
 
-            return li;
+            div.appendChild(li);
+
+            return div;
         }
     }
 }

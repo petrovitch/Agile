@@ -1,21 +1,21 @@
 const data = [
-    { id: 1, name: { first: "Richard", last: "Anthony" } },
-    { id: 2, name: { first: "Alfred", last: "Johnson" } },
-    { id: 3, name: { first: "Frank", last: "Canady" } },
-    { id: 4, name: { first: "Nitzi", last: "Wright" } },
-    { id: 5, name: { first: "Josh", last: "Flippen" } },
-    { id: 6, name: { first: "Jason", last: "Ayer" } },
-    { id: 7, name: { first: "Hannah", last: "Hodge" } },
-    { id: 8, name: { first: "Brooks", last: "Canfield" } },
-    { id: 9, name: { first: "Jeff", last: "Maddox" } },
-    { id: 10, name: { first: "David", last: "Studdard" } },
-    { id: 11, name: { first: "Kenn E.", last: "Thompson" } },
-    { id: 12, name: { first: "Tim", last: "Wilson" } },
-    { id: 13, name: { first: "Edward", last: "Eoff" } },
-    { id: 14, name: { first: "Matt", last: "Rhodes" } },
-    { id: 15, name: { first: "Jerry", last: "Carter" } },
-    { id: 16, name: { first: "Christopher", last: "Benson" } },
-    { id: 17, name: { first: "Samuel", last: "Wells" } }
+    { id: 1, name: { first: "Richard", last: "Anthony" }, department: "Management" },
+    { id: 2, name: { first: "Alfred", last: "Johnson" }, department: "Product Owner" },
+    { id: 3, name: { first: "Frank", last: "Canady" }, department: "Development" },
+    { id: 4, name: { first: "Nitzi", last: "Wright" }, department: "QA" },
+    { id: 5, name: { first: "Josh", last: "Flippen" }, department: "QA" },
+    { id: 6, name: { first: "Jason", last: "Ayer" }, department: "Development" },
+    { id: 7, name: { first: "Hannah", last: "Hodge" }, department: "Development" },
+    { id: 8, name: { first: "Brooks", last: "Canfield" }, department: "Development" },
+    { id: 9, name: { first: "Jeff", last: "Maddox" }, department: "Development" },
+    { id: 10, name: { first: "David", last: "Studdard" }, department: "Development" },
+    { id: 11, name: { first: "Kenn E.", last: "Thompson" }, department: "Development" },
+    { id: 12, name: { first: "Tim", last: "Wilson" }, department: "Development" },
+    { id: 13, name: { first: "Edward", last: "Eoff" }, department: "Support" },
+    { id: 14, name: { first: "Matt", last: "Rhodes" }, department: "IT" },
+    { id: 15, name: { first: "Jerry", last: "Carter" }, department: "IT" },
+    { id: 16, name: { first: "Christopher", last: "Benson" }, department: "Support" },
+    { id: 17, name: { first: "Samuel", last: "Wells" }, department: "QA" }
 ];
 
 const repoName = 'Attendee Repository';

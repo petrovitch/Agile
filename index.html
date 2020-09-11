@@ -41,6 +41,7 @@
         </div> -->
 
     </main>
+
     <footer class="meeting__footer"></footer>
 
     <!-- Modal: Splash/Startup Screen -->
@@ -58,6 +59,7 @@
             <div class="modal__header">
                 <h3>Meeting</h3>
             </div>
+
             <div class="modal__content">
                 <div class="modal__field">
                     <label for="meeting-start">Title:</label>
@@ -76,18 +78,70 @@
                     <input type="number" name="" id="meeting-duration">
                 </div>
             </div>
+
+            <footer>
+                <button>Cancel</button>
+                <button>Okay</button>
+            </footer>
         </div>
     </div>
 
-    <!-- Modal: Participant Manager -->
-    <div id="participantManager" class="[ modal ] [ hidden ]">
+    <!-- Modal: Attendee Settings -->
+    <div id="attendee-settings" class="modal hidden">
         <div class="modal__dialog">
             <header class="modal__header">
-                <h3>Participants</h3>
+                <h2>Attendee</h2>
             </header>
+
             <section class="modal__content">
-                <select id="selectParticipant"></select>
+                <fieldset>
+                    <legend>Meeting:</legend>
+
+                    <div class="modal__field">
+                        <label for="attendee-setting-present" style="display: inline-block">Attending</label>
+                        <input type="checkbox" name="attending" id="attendee-setting-present" checked>
+                    </div>
+
+                    <div class="modal__field">
+                        <label for="attendee-setting-meeting-role">Meeting Role</label>
+                        <select name="attendee-setting-meeting-role" id="attendee-setting-meeting-role">
+                            <!-- preview only -->
+                            <option value="1">Lead</option>
+                            <option value="2">Participant</option>
+                            <option value="3">Observer</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Attendee</legend>
+                    <div class="modal__field">
+                        <label for="attendee-setting-first-name">First Name</label>
+                        <input type="text" id="attendee-setting-first-name">
+                    </div>
+
+                    <div class="modal__field">
+                        <label for="attendee-setting-last-name">Last Name</label>
+                        <input type="text" id="attendee-setting-last-name">
+                    </div>
+
+                    <div class="modal__field">
+                        <label for="meeting-setting-department">Department</label>
+                        <input type="text" name="" id="meeting-setting-department"
+                            list="meeting-setting-department-list">
+                        <datalist id="meeting-setting-department-list">
+                            <option value="Management"></option>
+                            <option value="Pion"></option>
+                            <option value="Other"></option>
+                        </datalist>
+                    </div>
+                </fieldset>
             </section>
+
+            <footer class="modal__footer">
+                <button class="modal__button">Okay</button>
+                <button class="modal__button">Cancel</button>
+            </footer>
         </div>
     </div>
 </body>

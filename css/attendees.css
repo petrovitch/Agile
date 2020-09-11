@@ -29,13 +29,14 @@
 .participant > label:hover {
     background-color: var(--highlight-bg);
     color: var(--highlight-fg);
-    font-weight: bold;
+    /* font-weight: bold; */
+    text-shadow: 0 0 1px black;
 }
 
 .participant-name {
     font-weight: normal;
     color: black;
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 .departments {
