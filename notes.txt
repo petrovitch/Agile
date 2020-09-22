@@ -6,3 +6,6 @@ Larger than a certain screen size now creates two columns of each type/role of a
 * 2020-08-21 09:19 AM Noticing peoples reaction it might be nice to highlight the person 
 speaking, and maybe gray Edward's name so we know he is there, but he's in the background 
 so people won't consider calling on him.
+* 2020-09-22 09:08 AM It would be nice to add a poll for response to questions like today: 
+Should we extend the sprint? Then very quickly without conversation we could have a vote.
+Not even bother with a subject.  Just a quick poll of attendees.
