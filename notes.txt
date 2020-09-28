@@ -9,3 +9,20 @@ so people won't consider calling on him.
 * 2020-09-22 09:08 AM It would be nice to add a poll for response to questions like today: 
 Should we extend the sprint? Then very quickly without conversation we could have a vote.
 Not even bother with a subject.  Just a quick poll of attendees.
+* 2020-09-28 07:36 AM I've been studying for the Scrum Master Certification.  Scored 98% 
+on their practice exam.  I'll probably study a few more weekends before taking the actual
+exam(s).  There are two exams: Certified Scrum Master (CSM) that requires
+a two day class and costs nearly $700, but it's easier to pass; and PSM1 Scrum Certification
+that costs $150 and is more difficult to pass.  Anyway, if I pass these exam(s) and get
+Richard's and Alfred's approval then there are several changes that need to take place.
+First, the daily scrum is not for management or the Product Owner.  Like Edward from
+Customer Service, they can be in the meeting as observers.  Richard, on the otherhand,
+is a developer too so he should be removed from the top of the list and randomized
+with the rest of development.
+
+Scrum has no rule against holding other meetings so technically as the Daily Scrum ends
+then another meeting of Product Owner and Managemnt can begin where Edward, Alfred, and
+Richard can participate.
+
+I setup other Scrum meetings that may be developed later, i.e., Scrum Planning, 
+Scrum Review, Scrum Retrospective, and Product Backlog Refinement.
