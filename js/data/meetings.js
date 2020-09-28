@@ -36,6 +36,7 @@ const meetings = [
         title: "Product Backlog Refinement",
         time: { start: "14:00", duration: "180" },
         imageUrl: ""
+    },
     {
         id: 2,
         title: "Go/No-Go",
