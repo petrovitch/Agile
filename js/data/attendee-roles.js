@@ -3,7 +3,7 @@ import { RoleType as Role } from './types.js';
 const data = [
     { meetingId: 1, attendeeId: 1, role: Role.Lead },
     { meetingId: 1, attendeeId: 2, role: Role.Lead },
-    { meetingId: 1, attendeeId: 3, role: Role.Participant },
+    // { meetingId: 1, attendeeId: 3, role: Role.Participant },
     { meetingId: 1, attendeeId: 4, role: Role.Participant },
     { meetingId: 1, attendeeId: 5, role: Role.Participant },
     { meetingId: 1, attendeeId: 6, role: Role.Participant },
@@ -19,7 +19,7 @@ const data = [
 
     { meetingId: 2, attendeeId: 1, role: Role.Lead },
     { meetingId: 2, attendeeId: 2, role: Role.Lead },
-    { meetingId: 2, attendeeId: 3, role: Role.Participant },
+    // { meetingId: 2, attendeeId: 3, role: Role.Participant },
     { meetingId: 2, attendeeId: 4, role: Role.Participant },
     { meetingId: 2, attendeeId: 5, role: Role.Participant },
     { meetingId: 2, attendeeId: 6, role: Role.Participant },

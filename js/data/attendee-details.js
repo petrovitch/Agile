@@ -1,7 +1,7 @@
 const data = [
     { id: 1, name: { first: "Richard", last: "Anthony" }, department: "Management" },
     { id: 2, name: { first: "Alfred", last: "Johnson" }, department: "Product Owner" },
-    { id: 3, name: { first: "Frank", last: "Canady" }, department: "Development" },
+    // { id: 3, name: { first: "Frank", last: "Canady" }, department: "Development" },
     { id: 4, name: { first: "Nitzi", last: "Wright" }, department: "QA" },
     { id: 5, name: { first: "Josh", last: "Flippen" }, department: "QA" },
     { id: 6, name: { first: "Jason", last: "Ayer" }, department: "Development" },
