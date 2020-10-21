@@ -92,7 +92,11 @@ class Controller {
             if (label) {
                 label.setAttribute('for', id);
                 label.classList.add('participant-name');
-                const text = document.createTextNode(`${attendee.name.last}, ${attendee.name.first}`);
+                if (attendee.name.first.length != 0){
+                    var text = document.createTextNode(`${attendee.name.last}, ${attendee.name.first}`);
+                } else {
+                    var text = document.createTextNode(`${attendee.name.last} ${attendee.name.first}`);
+                }
                 label.appendChild(text);
 
                 li.appendChild(label);

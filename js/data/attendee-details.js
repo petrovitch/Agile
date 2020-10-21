@@ -8,14 +8,17 @@ const data = [
     { id: 7, name: { first: "Hannah", last: "Hodge" }, department: "Development" },
     { id: 8, name: { first: "Brooks", last: "Canfield" }, department: "Development" },
     { id: 9, name: { first: "Jeff", last: "Maddox" }, department: "Development" },
-    { id: 10, name: { first: "David", last: "Studdard" }, department: "Development" },
+    // { id: 10, name: { first: "David", last: "Studdard" }, department: "Development" },
     { id: 11, name: { first: "Kenn E.", last: "Thompson" }, department: "Development" },
     { id: 12, name: { first: "Tim", last: "Wilson" }, department: "Development" },
     { id: 13, name: { first: "Edward", last: "Eoff" }, department: "Support" },
     { id: 14, name: { first: "Matt", last: "Rhodes" }, department: "IT" },
     { id: 15, name: { first: "Jerry", last: "Carter" }, department: "IT" },
     { id: 16, name: { first: "Christopher", last: "Benson" }, department: "Support" },
-    { id: 17, name: { first: "Samuel", last: "Wells" }, department: "QA" }
+    { id: 17, name: { first: "Samuel", last: "Wells" }, department: "QA" },
+    { id: 18, name: { first: "Paul", last: "Anderson" }, department: "Development" },
+    { id: 19, name: { first: "Jonathan", last: "Granger" }, department: "Development" },
+    { id: 20, name: { first: "", last: "Scrum Master" }, department: "Support" },
 ];
 
 const repoName = 'Attendee Repository';

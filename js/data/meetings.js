@@ -12,24 +12,15 @@ const meetings = [
     {
         // The Daily Scrum is a 15-minute time-boxed event for the Development Team.
         id: 1,
-        title: "Daily Scrum Meeting",
-        time: { start: "8:45", duration: "15" },
+        title: "Daily Scrum",
+        time: { start: "9:00", duration: "15" },
         imageUrl: "/img/splash.png"
     },
     {
         // This is not a Scrum Event.
         id: 4,
-        title: "Daily Meeting with Product Owner and Management",
+        title: "Daily Review",
         time: { start: "9:00", duration: "5" },
-        imageUrl: ""
-    },
-    {
-        // The Develoment Team or team members often meet immediately after the 
-        // Daily Scrum for detailed discussions, or to adapt, or replan, the rest 
-        // of the Sprint's work.
-        id: 8,
-        title: "Detailed Discussions",
-        time: { start: "9:00", duration: "15" },
         imageUrl: ""
     },
     {
