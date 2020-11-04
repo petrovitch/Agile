@@ -18,7 +18,7 @@ const data = [
     // { meetingId: 1, attendeeId: 10, role: Role.Participant },
     { meetingId: 1, attendeeId: 18, role: Role.Participant },
     { meetingId: 1, attendeeId: 19, role: Role.Participant },
-    { meetingId: 1, attendeeId: 20, role: Role.Observer },
+    // { meetingId: 1, attendeeId: 20, role: Role.Observer },
 
 
     { meetingId: 2, attendeeId: 1, role: Role.Lead },
