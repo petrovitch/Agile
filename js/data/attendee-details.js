@@ -17,9 +17,8 @@ const data = [
     { id: 16, name: { first: "Christopher", last: "Benson" }, department: "Support" },
     { id: 17, name: { first: "Sam", last: "Wells" }, department: "QA" },
     { id: 18, name: { first: "Paul", last: "Anderson" }, department: "Development" },
-    // { id: 19, name: { first: "Jonathan", last: "Granger" }, department: "Development" },
-    { id: 20, name: { first: "", last: "Scrum Master" }, department: "Support" },
-    { id: 21, name: { first: "Dmytro", last: "Sholka" }, department: "Development" },
+    // { id: 19, name: { first: "Jonathan", last: "Granger" }, department: "Development" }
+    { id: 19, name: { first: "Dmytro", last: "Sholka" }, department: "Development" }
 ];
 
 const repoName = 'Attendee Repository';

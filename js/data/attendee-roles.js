@@ -39,9 +39,7 @@ const data = [
     { meetingId: 2, attendeeId: 16, role: Role.Participant },
     { meetingId: 2, attendeeId: 17, role: Role.Participant },
     { meetingId: 2, attendeeId: 18, role: Role.Participant },
-    // { meetingId: 2, attendeeId: 19, role: Role.Participant }
-    { meetingId: 2, attendeeId: 20, role: Role.Participant },
-    { meetingId: 2, attendeeId: 21, role: Role.Participant },
+    { meetingId: 2, attendeeId: 19, role: Role.Participant }
 ];
 
 const repoName = 'Meeting Attendee Role Repository'
