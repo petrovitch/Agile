@@ -14,11 +14,13 @@ const data = [
     { id: 13, name: { first: "Edward", last: "Eoff" }, department: "Support" },
     { id: 14, name: { first: "Matt", last: "Rhodes" }, department: "IT" },
     // { id: 15, name: { first: "Jerry", last: "Carter" }, department: "IT" },
-    { id: 16, name: { first: "Christopher", last: "Benson" }, department: "Support" },
+    // { id: 16, name: { first: "Christopher", last: "Benson" }, department: "Support" },
     { id: 17, name: { first: "Sam", last: "Wells" }, department: "QA" },
     { id: 18, name: { first: "Paul", last: "Anderson" }, department: "Development" },
     // { id: 19, name: { first: "Jonathan", last: "Granger" }, department: "Development" },
-    { id: 20, name: { first: "Dmytro", last: "Sholka" }, department: "Development" }
+    { id: 20, name: { first: "Dmytro", last: "Sholka" }, department: "Development" },
+    { id: 21, name: { first: "Joe", last: "York" }, department: "Management" },
+    { id: 22, name: { first: "Shane", last: "Petty" }, department: "Management" },
 ];
 
 const repoName = 'Attendee Repository';

@@ -2,53 +2,11 @@ import { RoleType as Role } from './types.js';
 
 const meetings = [
     {
-        // Sprint Planning is time-boxed to a maximum of eight hours for a one-month Sprint.
-        // For shorter Sprints, the event is usually shorter.
-        id: 3,
-        title: "Sprint Planning",
-        time: { start: "10:00", duration: "240" },
-        imageUrl: ""
-    },
-    {
         // The Daily Scrum is a 15-minute time-boxed event for the Development Team.
         id: 1,
         title: "Daily Scrum",
         time: { start: "9:00", duration: "15" },
         imageUrl: "/img/splash.png"
-    },
-    {
-        // This is not a Scrum Event.
-        id: 4,
-        title: "Daily Review",
-        time: { start: "9:00", duration: "5" },
-        imageUrl: ""
-    },
-    {
-        // This is at most a four-hour meeting for one-month Sprints.  For shorter
-        // Sprints, the event is usually shorter.  Attendees include the Scrum Team
-        // (Product Owner, Scrum Master, and Development Team) and key stakeholders 
-        // invited by the Product Owner.
-        id: 5,
-        title: "Sprint Review",
-        time: { start: "14:00", duration: "240" },
-        imageUrl: ""
-    },
-    {
-        // This is at most a three-hour meeting for one-month Sprints.  For shorter
-        // Sprints, the even is usually shorter. The Scrum Master participates as a 
-        // peer team member in the meeting from the accountability over the Scrum
-        // process.  It is an opportunity for the Scrum Team to inspect itself.
-        id: 6,
-        title: "Sprint Retrospective",
-        time: { start: "14:00", duration: "180" },
-        imageUrl: ""
-    },
-    {
-        // This is not a Scrum Event.
-        id: 7,
-        title: "Product Backlog Refinement",
-        time: { start: "14:00", duration: "180" },
-        imageUrl: ""
     },
     {
         // This is not a Scrum Event.

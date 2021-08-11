@@ -6,7 +6,7 @@ class Model {
     // Create:
 
     // Read:
-    async load(meetingId = 1) {
+    async load(meetingId = 1) { // 1 = Scrum; 2 = Go/No Go
         try {
             const meeting = await this.meetingRepo.getById(meetingId);
 
