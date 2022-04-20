@@ -8,7 +8,7 @@ const data = [
     { id: 6, name: { first: "Jason", last: "Ayer" }, department: "Development" },
     // { id: 7, name: { first: "Hannah", last: "Hodge" }, department: "Development" },
     { id: 8, name: { first: "Brooks", last: "Canfield" }, department: "Development" },
-    { id: 9, name: { first: "Jeff", last: "Maddox" }, department: "Development" },
+    // { id: 9, name: { first: "Jeff", last: "Maddox" }, department: "Development" },
     { id: 10, name: { first: "Armando", last: "Apolinar" }, department: "Development" },
     { id: 11, name: { first: "Kenn E.", last: "Thompson" }, department: "Development" },
     { id: 12, name: { first: "Tim", last: "Wilson" }, department: "Development" },
